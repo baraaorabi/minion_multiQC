@@ -24,7 +24,7 @@ cat $outputbase/workspace/*.fastq > $fastq_file
 echo "Running MinION QC R script"
 outmqc=$outputbase/"minionQC"
 seqsum=$outputbase/"sequencing_summary.txt"
-minion_QC.R $seqsum $outmqc
+minion_QC.R -i $seqsum -o $outmqc
 
 echo "Mapping with NGMLR"
 outngmlr=$outputbase"ngmlr/"
